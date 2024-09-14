@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Calificaciones</title>
+</head>
+<body>
+    <h1>Predicción de Calificaciones</h1>
+    <form action="/predict" method="post">
+        <label for="horas_estudio">Horas de Estudio:</label><br>
+        <input type="text" id="horas_estudio" name="horas_estudio"><br>
+
+        <label for="asistencia">Asistencia (%):</label><br>
+        <input type="text" id="asistencia" name="asistencia"><br>
+
+        <label for="calificaciones_anteriores">Calificaciones Anteriores:</label><br>
+        <input type="text" id="calificaciones_anteriores" name="calificaciones_anteriores"><br>
+
+        <label for="sesiones_tutoria">Sesiones de Tutoría:</label><br>
+        <input type="text" id="sesiones_tutoria" name="sesiones_tutoria"><br>
+
+        <input type="submit" value="Predecir">
+    </form>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
